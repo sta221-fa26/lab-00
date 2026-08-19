@@ -1,0 +1,28 @@
+---
+title: "Lab 00: Getting started"
+author: "Add name"
+date: "August 24, 2026"
+format: pdf
+editor: visual
+---
+
+```{r}
+#| label: load-package-data
+#| message: false
+#| warning: false
+
+
+library(tidyverse)
+bikeshare <- read_csv("data/bikeshare-2012.csv")
+```
+
+```{r}
+ggplot(data = bikeshare, aes(x = temperature, y = count)) +
+  geom_point() + 
+  labs(x = "Temperature (in Celsius)", 
+       y = "Bike rentals", 
+       title = "Daily bike rentals versus temperature", 
+       subtitle = "Capital Bikeshare 2012")
+```
+
+\[Add response here\]
